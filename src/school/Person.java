@@ -1,9 +1,19 @@
 package school;
 
 public class Person {
-    String name;
-    int age;
-    String gender;
+    private String name;
+    private int age;
+    private String gender;
+
+    Person() {
+        this("Alex Boon", 40, "M");
+    }
+
+    Person(String name, int age, String gender) {
+        setName(name);
+        setAge(age);
+        setGender(gender);
+    }
 
     public String getName() {
         return name;
@@ -31,6 +41,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return super.toString();
+        return getName() + ", age: " + getAge() + ", gender: " + getGender();
     }
 }

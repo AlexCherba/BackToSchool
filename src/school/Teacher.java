@@ -3,9 +3,9 @@ package school;
 public class Teacher extends Person {
     private double salary;
     private String subject;
-    public static Object[][] subjectAndSalaryArray = new Object[4][2];
+    private static Object[][] subjectAndSalaryArray = new Object[4][2];
 
-    {
+    static {
         subjectAndSalaryArray[0][0] = "Computer Science";
         subjectAndSalaryArray[0][1] = 100000.0d;
         subjectAndSalaryArray[1][0] = "Chemistry";
@@ -16,15 +16,14 @@ public class Teacher extends Person {
         subjectAndSalaryArray[3][1] = 120000.0d;
     }
 
-    public Teacher(){
-        this("Alex Boon",40, "Man", "Computer Science",100000);
+    Teacher() {
+        this("Alex Boon", 40, "M", "Computer Science", 100000);
     }
-    public Teacher(String name, int age, String gender, String subject, double salary) {
-        super.setName(name);
-        super.setAge(age);
-        super.setGender(gender);
-        this.setSubject(subject);
-        this.setSalary(salary);
+
+    Teacher(String name, int age, String gender, String subject, double salary) {
+        super(name, age, gender);
+        setSubject(subject);
+        setSalary(salary);
     }
 
     public double getSalary() {
@@ -45,6 +44,6 @@ public class Teacher extends Person {
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString() + ", subject: " + getSubject() + ", salary: " + getSalary();
     }
 }

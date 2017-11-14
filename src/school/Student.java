@@ -1,12 +1,22 @@
 package school;
 
-public class Student {
-    int idNumber;
-    double gpa;
+public class Student extends Person{
+    private int idNumber;
+    private double gpa;
+
+    Student() {
+        this("Cim Cin Un",44, "M", 3543543 , 4.43);
+    }
+
+    Student(String name, int age, String gender, int idNumber, double gpa) {
+        super(name, age, gender);
+        setIdNumber(idNumber);
+        setGpa(gpa);
+    }
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString() + ", student id: " + getIdNumber() + ", gpa: " + getGpa() ;
     }
 
     public int getIdNumber() {
