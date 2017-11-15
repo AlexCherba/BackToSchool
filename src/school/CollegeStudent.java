@@ -4,13 +4,13 @@ public class CollegeStudent extends Student {
     private int year;
     private String major;
 
-    private static String[] majorArray = {
+    private static final String[] MAJOR_ARRAY = {
             "Electrical Engineering",
             "Communications",
             "Undeclared"
     };
 
-    private static int[] yearArray = {1, 2, 3, 4, 5};
+    private static final int[] YEA_RARRAY = {1, 2, 3, 4, 5};
 
     CollegeStudent() {
         this("Oleg Utkin", 19, "M", 3434, 4.5, 2, "Communications");
@@ -18,8 +18,8 @@ public class CollegeStudent extends Student {
 
     CollegeStudent(String name, int age, String gender, int idNumber, double gpa, int year, String major) {
         super(name, age, gender, idNumber, gpa);
-        setYear(year);
-        setMajor(major);
+        this.year = year;
+        this.major = major;
     }
 
     public int getYear() {

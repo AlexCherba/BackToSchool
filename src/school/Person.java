@@ -10,9 +10,9 @@ public class Person {
     }
 
     Person(String name, int age, String gender) {
-        setName(name);
-        setAge(age);
-        setGender(gender);
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 
     public String getName() {

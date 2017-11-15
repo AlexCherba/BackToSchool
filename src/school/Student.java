@@ -10,8 +10,8 @@ public class Student extends Person{
 
     Student(String name, int age, String gender, int idNumber, double gpa) {
         super(name, age, gender);
-        setIdNumber(idNumber);
-        setGpa(gpa);
+        this.idNumber = idNumber;
+        this.gpa = gpa;
     }
 
     @Override

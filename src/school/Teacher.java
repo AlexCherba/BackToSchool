@@ -3,17 +3,17 @@ package school;
 public class Teacher extends Person {
     private double salary;
     private String subject;
-    private static Object[][] subjectAndSalaryArray = new Object[4][2];
+    private static final Object[][] SUBJECT_SALARY_ARRAY = new Object[4][2];
 
     static {
-        subjectAndSalaryArray[0][0] = "Computer Science";
-        subjectAndSalaryArray[0][1] = 100000.0d;
-        subjectAndSalaryArray[1][0] = "Chemistry";
-        subjectAndSalaryArray[1][1] = 90000.0d;
-        subjectAndSalaryArray[2][0] = "English";
-        subjectAndSalaryArray[2][1] = 110000.0d;
-        subjectAndSalaryArray[3][0] = "Other";
-        subjectAndSalaryArray[3][1] = 120000.0d;
+        SUBJECT_SALARY_ARRAY[0][0] = "Computer Science";
+        SUBJECT_SALARY_ARRAY[0][1] = 100000.0d;
+        SUBJECT_SALARY_ARRAY[1][0] = "Chemistry";
+        SUBJECT_SALARY_ARRAY[1][1] = 90000.0d;
+        SUBJECT_SALARY_ARRAY[2][0] = "English";
+        SUBJECT_SALARY_ARRAY[2][1] = 110000.0d;
+        SUBJECT_SALARY_ARRAY[3][0] = "Other";
+        SUBJECT_SALARY_ARRAY[3][1] = 120000.0d;
     }
 
     Teacher() {
@@ -22,8 +22,8 @@ public class Teacher extends Person {
 
     Teacher(String name, int age, String gender, String subject, double salary) {
         super(name, age, gender);
-        setSubject(subject);
-        setSalary(salary);
+        this.subject = subject;
+        this.salary = salary;
     }
 
     public double getSalary() {
